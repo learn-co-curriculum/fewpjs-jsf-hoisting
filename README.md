@@ -114,9 +114,9 @@ myFunc();
 // => undefined
 ```
 
-It prints out `undefined`. What the heck?!
+It prints out `undefined`. What is going on?
 
-You see, in JavaScript, hoisting only applies to variable _declarations_; not
+In JavaScript, hoisting only applies to variable _declarations_; not
 variable _assignments_. As a quick refresher on that terminology:
 
 ```js
@@ -225,7 +225,7 @@ function myGoodFunc () {
 declared with `const` and `let` do technically get 'hoisted', but the JavaScript
 engine doesn't allow them to be referenced before they've been initialized.
 
-Bad:
+Recommended:
 
 ```js
 myVar;
@@ -234,7 +234,7 @@ let myVar = "Assignment is optional since we used 'let'.";
 // ERROR: Uncaught ReferenceError: myVar is not defined
 ```
 
-Good:
+Not recommended:
 
 ```js
 const myOtherVar = "Gotta assign a value for our beloved 'const'.";
