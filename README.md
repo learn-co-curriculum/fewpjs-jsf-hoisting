@@ -3,7 +3,7 @@
 ## Learning Goals
 
 1. Identify how function and variable declarations are hoisted
-2. Describe best variable declaration pratices
+2. Describe best variable declaration practices
 
 ## Introduction
 
