@@ -228,19 +228,19 @@ engine doesn't allow them to be referenced before they've been initialized.
 Recommended:
 
 ```js
-myVar;
+const myOtherVar = "Gotta assign a value for our beloved 'const'.";
 
-let myVar = "Assignment is optional since we used 'let'.";
-// ERROR: Uncaught ReferenceError: myVar is not defined
+myOtherVar;
+// => "Gotta assign a value for our beloved 'const'."
 ```
 
 Not recommended:
 
 ```js
-const myOtherVar = "Gotta assign a value for our beloved 'const'.";
+myVar;
 
-myOtherVar;
-// => "Gotta assign a value for our beloved 'const'."
+let myVar = "Assignment is optional since we used 'let'.";
+// ERROR: Uncaught ReferenceError: myVar is not defined
 ```
 
 Since we can't even reference them, the whole problem of hoisted variables
